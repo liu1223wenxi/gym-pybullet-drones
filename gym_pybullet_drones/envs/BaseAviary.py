@@ -28,7 +28,7 @@ class BaseAviary(gym.Env):
                  neighbourhood_radius: float=np.inf,
                  initial_xyzs=None,
                  initial_rpys=None,
-                 physics: Physics=Physics.PYB,
+                 physics: Physics=Physics.PYB_GND,
                  pyb_freq: int = 240,
                  ctrl_freq: int = 240,
                  gui=False,

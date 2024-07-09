@@ -12,7 +12,7 @@ class HoverAviary(BaseRLAviary):
                  drone_model: DroneModel=DroneModel.CF2X,
                  initial_xyzs=None,
                  initial_rpys=None,
-                 physics: Physics=Physics.PYB,
+                 physics: Physics=Physics.PYB_GND,
                  pyb_freq: int = 240,
                  ctrl_freq: int = 30,
                  gui=False,
