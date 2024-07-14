@@ -526,6 +526,7 @@ class BaseAviary(gym.Env):
         The format of the video output is .mp4, if GUI is True, or .png, otherwise.
 
         """
+        print("########################    Im Recording     ######################")
         if self.RECORD and self.GUI:
             self.VIDEO_ID = p.startStateLogging(loggingType=p.STATE_LOGGING_VIDEO_MP4,
                                                 fileName=os.path.join(self.OUTPUT_FOLDER, "video-"+datetime.now().strftime("%m.%d.%Y_%H.%M.%S")+".mp4"),
@@ -535,7 +536,7 @@ class BaseAviary(gym.Env):
             self.FRAME_NUM = 0
             self.IMG_PATH = os.path.join(self.OUTPUT_FOLDER, "recording_" + datetime.now().strftime("%m.%d.%Y_%H.%M.%S"), '')
             os.makedirs(os.path.dirname(self.IMG_PATH), exist_ok=True)
-    
+        print("########################    Record done     ######################")
     ################################################################################
 
     def _getDroneStateVector(self,
@@ -661,7 +662,7 @@ class BaseAviary(gym.Env):
         Attribute NEIGHBOURHOOD_RADIUS is used to determine neighboring relationships.
 
         Returns
-        -------
+        -------prese
         ndarray
             (NUM_DRONES, NUM_DRONES)-shaped array of 0's and 1's representing the adjacency matrix 
             of the system: adj_mat[i,j] == 1 if (i, j) are neighbors; == 0 otherwise.
